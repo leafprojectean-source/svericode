@@ -1,0 +1,107 @@
+/* ================================
+   Auth Page Layout
+================================ */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;      /* page horizontal center */
+  align-items: center;          /* page vertical center */
+  background-color: var(--bg-light-color);
+}
+
+/* ================================
+   Auth Card
+================================ */
+.auth-card {
+  width: 340px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  /* Gradient border from logo colors */
+  /* border-top: 5px solid;
+  border-image: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  ) 1; */
+
+  /* Center card content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================================
+   Title
+================================ */
+.auth-title {
+  margin-bottom: 20px;
+  color: var(--primary-text);
+  text-align: center;
+}
+
+/* ================================
+   Inputs
+================================ */
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* ================================
+   Button
+================================ */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  border-radius: 6px;
+
+  color: var(--text-on-buttons);
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+/* ================================
+   Text & Links
+================================ */
+.auth-text {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--secondary-text);
+}
+
+.auth-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-text a:hover {
+  text-decoration: underline;
+}
