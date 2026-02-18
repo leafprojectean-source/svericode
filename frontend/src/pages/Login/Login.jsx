@@ -1,19 +1,37 @@
 import { useState } from "react";
 import "../../styles/Auth.css";
 import { useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (email === "admin@gmail.com" && password === "1234") {
-      navigate("/dashboard");
-    } else {
-      alert("Invalid credentials");
+    // Basic validation
+    if (!email || !password) {
+      setError("All fields are required");
+      return;
+    }
+
+    try {
+      const response = await axios.post("/api/login", {
+        email,
+        password,
+      });
+
+      const { user, token } = response.data;
+
+      login(user, token); // Update global state
+      navigate("/home"); // 🔥 Navigate after success
+    } catch (err) {
+      setError("Invalid credentials");
     }
   };
 
@@ -39,7 +57,7 @@ function Login() {
           required
           className="auth-input"
         />
-
+        {error && <p>{error}</p>}
         <button type="submit" className="auth-button">
           Login
         </button>

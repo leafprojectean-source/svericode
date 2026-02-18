@@ -1,10 +1,11 @@
+import { useAuth } from "./context/AuthContext";
 import AppRoutes from "./routes/Routes";
 
 function App() {
-  const isLoggedIn = false;
+  const { user } = useAuth();
   return (
     <>
-      <AppRoutes isLoggedIn={isLoggedIn} />
+      <AppRoutes isLoggedIn={user} />
     </>
   );
 }
