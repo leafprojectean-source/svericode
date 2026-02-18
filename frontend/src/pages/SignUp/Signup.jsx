@@ -22,7 +22,7 @@ function Signup() {
   return (
     <div className="auth-container">
       <form className="auth-card" onSubmit={handleSubmit}>
-        <h2 className="auth-title">Sign Up</h2>
+        <h2 className="auth-title">Register</h2>
 
         <input
           type="text"
@@ -61,7 +61,7 @@ function Signup() {
         />
 
         <button type="submit" className="auth-button">
-          Sign Up
+          Register
         </button>
 
         <p className="auth-text">

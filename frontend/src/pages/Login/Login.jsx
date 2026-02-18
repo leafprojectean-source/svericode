@@ -1,17 +1,17 @@
 import { useState } from "react";
 import "../../styles/Auth.css";
-// import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (email === "admin@gmail.com" && password === "1234") {
-      //   navigate("/dashboard");
+      navigate("/dashboard");
     } else {
       alert("Invalid credentials");
     }
@@ -44,7 +44,9 @@ function Login() {
           Login
         </button>
 
-        <p className="auth-text">Don’t have an account?</p>
+        <p className="auth-text">
+          Don’t have an account? <Link to={"/signup"}>Register</Link>
+        </p>
       </form>
     </div>
   );

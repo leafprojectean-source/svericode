@@ -1,10 +1,10 @@
-import Login from "./pages/Login/Login";
-import Signup from "./pages/SignUp/Signup";
+import AppRoutes from "./routes/Routes";
 
 function App() {
+  const isLoggedIn = false;
   return (
     <>
-      <Signup></Signup>
+      <AppRoutes isLoggedIn={isLoggedIn} />
     </>
   );
 }
