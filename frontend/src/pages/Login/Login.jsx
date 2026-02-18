@@ -32,6 +32,8 @@ function Login() {
       navigate("/home"); // 🔥 Navigate after success
     } catch (err) {
       setError("Invalid credentials");
+      setEmail("");
+      setPassword("");
     }
   };
 
