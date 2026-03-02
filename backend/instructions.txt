@@ -1,0 +1,11 @@
+//installation
+
+python3 -m venv venv
+source venv/bin/activate // venv\Scripts\activate  #for windows
+pip install django
+
+
+//to restart
+source venv/bin/activate
+python manage.py migrate
+python manage.py runserver
