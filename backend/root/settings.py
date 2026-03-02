@@ -82,9 +82,11 @@ DATABASES = { 'default': dj_database_url.parse(config('DATABASE_URL')) }
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'users.authentication.CookieJWTAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
 
 # Cookie settings
 SIMPLE_JWT = {
