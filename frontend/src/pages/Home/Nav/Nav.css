@@ -1,0 +1,149 @@
+.navbar {
+  background-color: var(--bg-dark-color);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-on-buttons);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+/* Links */
+.nav-links a {
+  margin: 0 15px;
+  color: var(--secondary-text);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1e1e1e;
+  color: white;
+}
+
+.login {
+  color: var(--secondary-text);
+  text-decoration: none;
+}
+
+.signup {
+  background: var(--primary-color);
+  color: var(--text-on-buttons);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Profile */
+.profile-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown a,
+.logout {
+  color: var(--secondary-text);
+  text-decoration: none;
+  padding: 6px 0;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logout {
+  color: var(--secondary-color);
+}
+
+/* Mobile */
+.mobile-menu {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-dark-color);
+    padding: 20px;
+  }
+
+  .mobile-drawer a {
+    margin-bottom: 10px;
+    color: var(--secondary-text);
+    text-decoration: none;
+  }
+}
+
+.logo-img{
+    width: 100px;
+    background: transparent;
+}

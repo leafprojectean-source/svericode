@@ -19,7 +19,13 @@ const AppRoutes = ({ isLoggedIn }) => {
       {/* Protected Route */}
       <Route
         path="/home"
-        element={isLoggedIn ? <Home /> : <Navigate to="/login" />}
+        element={
+          isLoggedIn ? (
+            <Home isLoggedIn={isLoggedIn} />
+          ) : (
+            <Navigate to="/login" />
+          )
+        }
       />
 
       {/* Catch-all */}

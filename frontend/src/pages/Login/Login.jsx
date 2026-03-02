@@ -28,8 +28,8 @@ function Login() {
 
       const { user, token } = response.data;
 
-      login(user, token); // Update global state
-      navigate("/home"); // 🔥 Navigate after success
+      login(user, token);
+      navigate("/home");
     } catch (err) {
       setError("Invalid credentials");
       setEmail("");
