@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "./Nav/Navbar";
 
-const Home = () => {
-  return <div>Home</div>;
+const Home = ({ isLoggedIn }) => {
+  return (
+    <>
+      <Navbar isLoggedIn={isLoggedIn} />
+    </>
+  );
 };
 
 export default Home;
